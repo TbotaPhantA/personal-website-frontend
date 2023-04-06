@@ -11,7 +11,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={homePageStyles.homePage}>
-        <div className={homePageStyles.title}>Hello, there 1</div>
+        <div className={homePageStyles.title}>
+          <div>{"Hi,"}</div>
+          <div>{"I'm "}<span>{"Timur"}</span></div>
+          <div>{"Backend developer"}</div>
+        </div>
       </main>
     </>
   )

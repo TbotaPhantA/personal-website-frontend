@@ -1,4 +1,5 @@
 $base-pink: #DE004E;
+$base-purple: #F887FF;
 
 .homePage {
   display: flex;
@@ -17,5 +18,9 @@ $base-pink: #DE004E;
     border-radius: 0 999px 999px 0;
     font-size: 14vh;
     padding: 20px;
+
+    span {
+      color: $base-purple;
+    }
   }
 }
