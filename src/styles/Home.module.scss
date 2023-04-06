@@ -8,16 +8,21 @@ $base-purple: #F887FF;
   color: blueviolet;
   width: 100vw;
   min-height: 100vh;
+  font-family: 'sedgwick-regular', serif;
 
   .title {
-    height: 50vh;
+    min-height: 50vh;
     width: 70%;
     background-color: black;
     color: $base-pink;
     opacity: 80%;
     border-radius: 0 999px 999px 0;
-    font-size: 14vh;
-    padding: 20px;
+    font-size: 6vw;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
 
     span {
       color: $base-purple;
