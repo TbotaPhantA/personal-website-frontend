@@ -1,4 +1,21 @@
+$base-pink: #DE004E;
+
 .homePage {
-  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  background-color: $base-pink;
   color: blueviolet;
+  width: 100vw;
+  min-height: 100vh;
+
+  .title {
+    height: 50vh;
+    width: 70%;
+    background-color: black;
+    color: $base-pink;
+    opacity: 80%;
+    border-radius: 0 999px 999px 0;
+    font-size: 14vh;
+    padding: 20px;
+  }
 }
