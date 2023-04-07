@@ -22,7 +22,7 @@ $base-purple: #F887FF;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
+    user-select: none;
 
     span {
       color: $base-purple;
