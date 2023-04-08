@@ -1,6 +1,7 @@
 import { push as Menu } from 'react-burger-menu';
 import sideBarStyles from '@/styles/components/SideBar.module.scss';
 import Link from 'next/link';
+import { CrossIcon } from '@/components/SideBar/CrossIcon';
 
 interface SideBarProps {
   pageWrapId: string,
@@ -15,6 +16,7 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       burgerButtonClassName={sideBarStyles.BmBurgerButton}
       burgerBarClassName={sideBarStyles.BmBurgerBars}
       crossButtonClassName={sideBarStyles.BmCrossButton}
+      customCrossIcon={<CrossIcon/>}
       crossClassName={sideBarStyles.BmCross}
       menuClassName={sideBarStyles.BmMenu}
       morphShapeClassName={sideBarStyles.BmMorphShape}

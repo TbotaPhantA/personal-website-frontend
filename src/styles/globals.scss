@@ -1,3 +1,5 @@
+$base-red: #DE004E;
+
 @font-face {
   font-family: 'sedgwick-regular';
   src: url('SedgwickAveDisplay-Regular.ttf');
@@ -8,5 +10,5 @@ body {
   padding: 0;
   min-width: 100vw;
   min-height: 100vh;
+  background-color: $base-red;
 }
-

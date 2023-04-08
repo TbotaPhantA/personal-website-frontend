@@ -23,8 +23,20 @@ $base-pink: #F887FF;
 
 /* Position and sizing of clickable cross button */
 .BmCrossButton {
-  height: 128px;
-  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $base-red;
+  height: 64px !important;
+  width: 64px !important;
+  text-align: center;
+  vertical-align: center;
+  top: 0 !important;
+  right: 0 !important;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Color/shape of close button cross */
@@ -45,6 +57,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .BmMenu {
   background: $base-purple;
   padding: 20vh 0 0;
+  margin: 0;
   font-size: 1.15em;
 }
 
@@ -62,12 +75,22 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .BmItem {
   display: inline-block;
   height: 5vh;
-  font-size: 3vh;
+  font-size: 4vh;
+  font-family: 'sedgwick-regular', serif;
   text-align: center;
   color: $base-red;
+  text-decoration: none;
+  padding: 1vh 0;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Styling of overlay */
 .BmOverlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.BmCrossCustomIcon {
 }
