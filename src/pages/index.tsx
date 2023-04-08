@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <div className={homePageStyles.homePage}>
-        <div className={homePageStyles.title}>
+        <div className={homePageStyles.title} data-aos="fade-right">
           <div>{"Hi,"}</div>
           <div>{"I'm "}<span>{"Timur"}</span></div>
           <div>{"Backend developer"}</div>
