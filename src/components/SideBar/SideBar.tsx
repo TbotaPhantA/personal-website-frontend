@@ -2,6 +2,7 @@ import { push as Menu } from 'react-burger-menu';
 import sideBarStyles from '@/styles/components/SideBar.module.scss';
 import Link from 'next/link';
 import { CrossIcon } from '@/components/SideBar/CrossIcon';
+import { SideBarSocialLinks } from '@/components/SideBar/SideBarSocialLinks';
 
 interface SideBarProps {
   pageWrapId: string,
@@ -28,6 +29,8 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       <hr className={sideBarStyles.SideBarVerticalLine} />
       <Link href={'/'} id={'home'} className={sideBarStyles.BmItem}>Home</Link>
       <Link href={'/about'} id={'about'} className={sideBarStyles.BmItem}>About</Link>
+      <hr className={sideBarStyles.SideBarVerticalLine} />
+      <SideBarSocialLinks />
     </Menu>
   )
 }
