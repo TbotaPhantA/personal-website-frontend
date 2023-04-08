@@ -1,10 +1,10 @@
-$base-pink: #DE004E;
-$base-purple: #F887FF;
+$base-red: #DE004E;
+$base-pink: #F887FF;
 
 .homePage {
   display: flex;
   align-items: center;
-  background-color: $base-pink;
+  background-color: $base-red;
   color: blueviolet;
   width: 100vw;
   min-height: 100vh;
@@ -14,7 +14,7 @@ $base-purple: #F887FF;
     min-height: 50vh;
     width: 70%;
     background-color: black;
-    color: $base-pink;
+    color: $base-red;
     opacity: 80%;
     border-radius: 0 999px 999px 0;
     font-size: 6vw;
@@ -25,7 +25,7 @@ $base-purple: #F887FF;
     user-select: none;
 
     span {
-      color: $base-purple;
+      color: $base-pink;
     }
   }
 }

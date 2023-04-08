@@ -1,0 +1,73 @@
+$base-purple: #321450;
+$base-red: #DE004E;
+$base-pink: #F887FF;
+
+/* Position and sizing of burger button */
+.BmBurgerButton {
+  position: fixed;
+  width: 50px;
+  height: 36px;
+  left: 16px;
+  top: 16px;
+}
+
+/* Color/shape of burger icon bars */
+.BmBurgerBars {
+  background: $base-purple;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.BmBurgerBarsHover {
+  background: black;
+}
+
+/* Position and sizing of clickable cross button */
+.BmCrossButton {
+  height: 128px;
+  width: 128px;
+}
+
+/* Color/shape of close button cross */
+.BmCross {
+  background: $base-red;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.BmMenuWrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.BmMenu {
+  background: $base-purple;
+  padding: 20vh 0 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.BmMorphShape {
+  fill: $base-red;
+}
+
+/* Wrapper for item list */
+.BmItemList {
+  color: $base-red;
+}
+
+/* Individual item */
+.BmItem {
+  display: inline-block;
+  height: 5vh;
+  font-size: 3vh;
+  text-align: center;
+  color: $base-red;
+}
+
+/* Styling of overlay */
+.BmOverlay {
+  background: rgba(0, 0, 0, 0.3);
+}
