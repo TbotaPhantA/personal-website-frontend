@@ -23,6 +23,7 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       morphShapeClassName={sideBarStyles.BmMorphShape}
       itemListClassName={sideBarStyles.BmItemList}
       overlayClassName={sideBarStyles.BmOverlay}
+      disableOverlayClick={true}
     >
       <div className={sideBarStyles.SideBarQuote}>{'"The only was to go fast is to go well."'}</div>
       <div className={sideBarStyles.SideBarQuoteAuthor}>{'Robert C. Martin'}</div>
