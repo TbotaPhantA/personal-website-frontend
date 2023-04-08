@@ -89,7 +89,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Styling of overlay */
 .BmOverlay {
-  background: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .BmCrossCustomIcon {
