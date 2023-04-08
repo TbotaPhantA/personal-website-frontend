@@ -23,6 +23,9 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       itemListClassName={sideBarStyles.BmItemList}
       overlayClassName={sideBarStyles.BmOverlay}
     >
+      <div className={sideBarStyles.SideBarQuote}>{'"The only was to go fast is to go well."'}</div>
+      <div className={sideBarStyles.SideBarQuoteAuthor}>{'Robert C. Martin'}</div>
+      <hr className={sideBarStyles.SideBarVerticalLine} />
       <Link href={'/'} id={'home'} className={sideBarStyles.BmItem}>Home</Link>
       <Link href={'/about'} id={'about'} className={sideBarStyles.BmItem}>About</Link>
     </Menu>

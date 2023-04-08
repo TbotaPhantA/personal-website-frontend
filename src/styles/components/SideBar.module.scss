@@ -56,7 +56,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .BmMenu {
   background: $base-purple;
-  padding: 20vh 0 0;
+  padding: 64px 0 0;
   margin: 0;
   font-size: 1.15em;
 }
@@ -93,5 +93,35 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-color: rgba(0, 0, 0, 0) !important;
 }
 
-.BmCrossCustomIcon {
+.SideBarQuote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: 200;
+  font-family: 'sedgwick-regular', serif;
+  text-shadow: 1px 1px 2px black;
+  padding: 3vh 2vw 0 2vw;
+  color: white;
+}
+
+.SideBarQuoteAuthor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+  text-align: center;
+  font-size: 2vh;
+  font-weight: 100;
+  font-family: 'sedgwick-regular', serif;
+  text-shadow: 1px 1px 2px black;
+  padding: 2vh 2vw 2vh 2vw;
+  color: white;
+}
+
+.SideBarVerticalLine {
+  width: 80%;
+  margin-bottom: 2vh;
 }
