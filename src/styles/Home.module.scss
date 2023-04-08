@@ -4,7 +4,8 @@ $base-pink: #F887FF;
 .homePage {
   display: flex;
   align-items: center;
-  background-color: $base-red;
+  background-image: url("../../public/cyberpunk-background.jpg");
+  background-position: right;
   color: blueviolet;
   width: 100vw;
   min-height: 100vh;
@@ -13,9 +14,8 @@ $base-pink: #F887FF;
   .title {
     min-height: 50vh;
     width: 70%;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.75);
     color: $base-red;
-    opacity: 80%;
     border-radius: 0 999px 999px 0;
     font-size: 6vw;
     padding: 30px;
