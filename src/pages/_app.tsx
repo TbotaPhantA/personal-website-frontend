@@ -13,7 +13,7 @@ config.autoAddCss = false;
 export default function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
-      duration: 900,
+      duration: 700,
       easing: "ease-out-quart",
       mirror: true,
     });
