@@ -8,9 +8,11 @@ $base-red: #DE004E;
 body {
   margin: 0;
   padding: 0;
-  min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
   background-color: $base-red;
   background-image: url("../../public/cyberpunk-background.jpg");
   background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }

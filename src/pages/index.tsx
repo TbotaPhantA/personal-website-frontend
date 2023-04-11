@@ -1,15 +1,12 @@
-import homePageStyles from '@/styles/Home.module.scss'
+import About from '@/anchors/about';
+import Home from '@/anchors/home';
+import mainStyles from '@/styles/Main.module.scss';
 
-export default function Home() {
+export default function Main() {
   return (
-    <>
-      <div className={homePageStyles.homePage}>
-        <div className={homePageStyles.title} data-aos="fade-right">
-          <div>{"Hi,"}</div>
-          <div>{"I'm "}<span>{"Timur"}</span></div>
-          <div>{"Backend developer"}</div>
-        </div>
-      </div>
-    </>
+    <div className={mainStyles.MainPage}>
+      <Home id="home" />
+      <About id="about" />
+    </div>
   )
 }

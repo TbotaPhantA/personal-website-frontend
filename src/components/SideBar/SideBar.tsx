@@ -1,4 +1,4 @@
-import { push as Menu } from 'react-burger-menu';
+import { slide as Menu } from 'react-burger-menu';
 import sideBarStyles from '@/styles/components/SideBar.module.scss';
 import Link from 'next/link';
 import { CrossIcon } from '@/components/SideBar/CrossIcon';
@@ -28,8 +28,8 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       <div className={sideBarStyles.SideBarQuote}>{'"The only was to go fast is to go well."'}</div>
       <div className={sideBarStyles.SideBarQuoteAuthor}>{'Robert C. Martin'}</div>
       <hr className={sideBarStyles.SideBarVerticalLine} />
-      <Link href={'/'} id={'home'} className={sideBarStyles.BmItem}>Home</Link>
-      <Link href={'/about'} id={'about'} className={sideBarStyles.BmItem}>About</Link>
+      <Link href={'#home'} id={'homeLink'} className={sideBarStyles.BmItem}>Home</Link>
+      <Link href={'#about'} id={'aboutLink'} className={sideBarStyles.BmItem}>About</Link>
       <hr className={sideBarStyles.SideBarVerticalLine} />
       <SideBarSocialLinks />
     </Menu>
