@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
     AOS.init({
       duration: 900,
       easing: "ease-out-quart",
+      mirror: true,
     });
   }, []);
 
