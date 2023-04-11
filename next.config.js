@@ -6,7 +6,11 @@ const nextConfig = {
   sassOptions: {
     fiber: false,
     includePaths: [path.join(__dirname, 'src/styles')],
-  }
+  },
+  i18n: {
+    locales: ['en', 'ru'],
+    defaultLocale: 'en',
+  },
 }
 
 module.exports = nextConfig
