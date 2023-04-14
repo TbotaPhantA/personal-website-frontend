@@ -2,11 +2,16 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import sideBarSocialLinksStyles from '../../styles/components/SideBarSocialLinks.module.scss';
 import githubSvg from '../../../public/github-mark-white.svg';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { chooseTranslation } from '@/shared/utils/chooseTranslation';
 
 export function SideBarSocialLinks() {
+  const { locale } = useRouter();
+  const t = chooseTranslation(locale);
+
   return (
     <div className={sideBarSocialLinksStyles.SideBarSocialLinks}>
-      <div className={sideBarSocialLinksStyles.SideBarSocialLinksTitle}>Links</div>
+      <div className={sideBarSocialLinksStyles.SideBarSocialLinksTitle}>{t.sidebar.links.title}</div>
       <a href="https://github.com/TbotaPhantA" target="_blank">
         <Image
           src={githubSvg}

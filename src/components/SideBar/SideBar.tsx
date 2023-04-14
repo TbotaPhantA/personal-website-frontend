@@ -3,6 +3,8 @@ import sideBarStyles from '@/styles/components/SideBar.module.scss';
 import Link from 'next/link';
 import { CrossIcon } from '@/components/SideBar/CrossIcon';
 import { SideBarSocialLinks } from '@/components/SideBar/SideBarSocialLinks';
+import { useRouter } from 'next/router';
+import { chooseTranslation } from '@/shared/utils/chooseTranslation';
 
 interface SideBarProps {
   pageWrapId: string,
@@ -10,6 +12,9 @@ interface SideBarProps {
 }
 
 export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
+  const { locale } = useRouter();
+  const t = chooseTranslation(locale);
+
   return (
     <Menu
       pageWrapId={pageWrapId}
@@ -28,8 +33,8 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       <div className={sideBarStyles.SideBarQuote}>{'"The only was to go fast is to go well."'}</div>
       <div className={sideBarStyles.SideBarQuoteAuthor}>{'Robert C. Martin'}</div>
       <hr className={sideBarStyles.SideBarVerticalLine} />
-      <Link href={'#home'} id={'homeLink'} className={sideBarStyles.BmItem}>Home</Link>
-      <Link href={'#about'} id={'aboutLink'} className={sideBarStyles.BmItem}>About</Link>
+      <Link href={'#home'} id={'homeLink'} className={sideBarStyles.BmItem}>{t.sidebar.homeButton}</Link>
+      <Link href={'#about'} id={'aboutLink'} className={sideBarStyles.BmItem}>{t.sidebar.aboutButton}</Link>
       <hr className={sideBarStyles.SideBarVerticalLine} />
       <SideBarSocialLinks />
     </Menu>
