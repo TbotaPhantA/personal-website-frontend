@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@import '../../variables';
 
 /* Position and sizing of burger button */
 .BmBurgerButton {
@@ -126,4 +126,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .SideBarVerticalLine {
   border-color: $base-red;
   width: 80%;
+}
+
+.SideBarFooter {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  padding: 1vh;
 }

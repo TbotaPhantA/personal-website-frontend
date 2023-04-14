@@ -1,5 +1,5 @@
 import { slide as Menu } from 'react-burger-menu';
-import sideBarStyles from '@/styles/components/SideBar.module.scss';
+import sideBarStyles from '@/styles/components/SideBar/SideBar.module.scss';
 import Link from 'next/link';
 import { CrossIcon } from '@/components/SideBar/CrossIcon';
 import { SideBarSocialLinks } from '@/components/SideBar/SideBarSocialLinks';
@@ -36,7 +36,9 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       <Link href={'#home'} id={'homeLink'} className={sideBarStyles.BmItem}>{t.sidebar.homeButton}</Link>
       <Link href={'#about'} id={'aboutLink'} className={sideBarStyles.BmItem}>{t.sidebar.aboutButton}</Link>
       <hr className={sideBarStyles.SideBarVerticalLine} />
-      <SideBarSocialLinks />
+      <div className={sideBarStyles.SideBarFooter}>
+        <SideBarSocialLinks />
+      </div>
     </Menu>
   )
 }
