@@ -5,6 +5,7 @@ import { CrossIcon } from '@/components/SideBar/CrossIcon';
 import { SideBarSocialLinks } from '@/components/SideBar/SideBarSocialLinks';
 import { useRouter } from 'next/router';
 import { chooseTranslation } from '@/shared/utils/chooseTranslation';
+import { LanguageSelect } from '@/components/LanguageSelect/LanguageSelect';
 
 interface SideBarProps {
   pageWrapId: string,
@@ -38,6 +39,7 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       <hr className={sideBarStyles.SideBarVerticalLine} />
       <div className={sideBarStyles.SideBarFooter}>
         <SideBarSocialLinks />
+        <LanguageSelect />
       </div>
     </Menu>
   )
