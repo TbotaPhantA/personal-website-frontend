@@ -1,3 +1,17 @@
+@import '../../variables';
+
 .LanguageSelect {
-  margin: 2vh 0;
+  margin: 2vh 0 1vh 0;
+  padding: 5px 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: $base-purple;
+  border-radius: 3px;
+  background-color: $base-red;
+  border: none;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 0 10px 1px $base-red;
+  }
 }
