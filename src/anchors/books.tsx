@@ -11,7 +11,7 @@ export function Books({ id }: HomeProps) {
   const t = chooseTranslation(locale);
 
   return (
-    <div id={id} className={booksStyles.BooksAnchor}>
+    <div id={id} className={booksStyles.BooksAnchor} data-aos="zoom-in">
       <div className={booksStyles.BooksAnchorTitle}>{t.pages.main.books.title}</div>
     </div>
   )
