@@ -3,6 +3,13 @@
 @font-face {
   font-family: 'sedgwick-regular';
   src: url('SedgwickAveDisplay-Regular.ttf');
+  unicode-range: U+0000-00FF;
+}
+
+@font-face {
+  font-family: 'sedgwick-regular';
+  src: url('ofont.ru_Toyz.ttf');
+  unicode-range: U+0400-04FF;
 }
 
 body {
