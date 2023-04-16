@@ -14,12 +14,16 @@ declare module "*-translations.json" {
       about: {
         title: string,
         description: string,
+      },
+      books: {
+        title: string,
       }
     }
   };
   export const sidebar: {
     homeButton: string,
     aboutButton: string,
+    booksButton: string,
     links: { title: string }
   }
 }
