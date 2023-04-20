@@ -5,10 +5,18 @@
   overflow: hidden;
 
   .BooksListItemTitle {
-    font-size: 46px;
+    font-size: 52px;
   }
 
   .BooksListItemContent {
-    font-size: 24px;
+    font-size: 30px;
+  }
+
+  &:nth-child(odd) {
+
+  }
+
+  &:nth-child(even) {
+
   }
 }
