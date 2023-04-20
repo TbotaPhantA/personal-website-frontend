@@ -1,10 +1,12 @@
 .BooksListItem {
+  background-color: rgba(0, 0, 0, 0.80);;
+  margin: 5vh 0;
 
   .BooksListItemTitle {
-
+    font-size: 46px;
   }
 
   .BooksListItemContent {
-
+    font-size: 24px;
   }
 }
