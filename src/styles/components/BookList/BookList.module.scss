@@ -1,6 +1,8 @@
 .BooksListItem {
   background-color: rgba(0, 0, 0, 0.80);;
   margin: 5vh 0;
+  height: 21vh;
+  overflow: hidden;
 
   .BooksListItemTitle {
     font-size: 46px;
