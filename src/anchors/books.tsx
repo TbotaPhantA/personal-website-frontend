@@ -14,8 +14,8 @@ export function Books({ id, bookReviews }: BooksProps) {
   const t = chooseTranslation(locale);
 
   return (
-    <div id={id} className={booksStyles.BooksAnchor} data-aos="zoom-in">
-      <div className={booksStyles.BooksAnchorTitle}>{t.pages.main.books.title}</div>
+    <div id={id} className={booksStyles.BooksAnchor}>
+      <div className={booksStyles.BooksAnchorTitle} data-aos="zoom-in">{t.pages.main.books.title}</div>
       <BooksList bookReviews={bookReviews} />
     </div>
   )
