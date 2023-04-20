@@ -2,16 +2,17 @@
 
 .BooksAnchor {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   width: 100%;
   color: white;
 
   .BooksAnchorTitle {
-    width: 100%;
     font-family: $font-family;
     font-size: 6vw;
     text-align: center;
     padding-top: 5vh;
-    margin-left: 300px;
+    padding-left: 300px;
+    user-select: none;
   }
 }
