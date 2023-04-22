@@ -1,22 +1,39 @@
+@import '../../variables';
+
 .BooksListItem {
-  background-color: rgba(0, 0, 0, 0.80);;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.80);
   margin: 5vh 0;
-  height: 21vh;
+  height: 220px;
   overflow: hidden;
+  padding: 20px;
 
   .BooksListItemTitle {
     font-size: 52px;
+    color: $base-red;
   }
 
   .BooksListItemContent {
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     font-size: 30px;
+    overflow: hidden;
   }
 
   &:nth-child(odd) {
-
+    margin-left: 25vw;
+    border-radius: 999px 0 0 999px;
+    padding-left: 100px;
+    padding-right: 300px;
   }
 
   &:nth-child(even) {
-
+    margin-right: 25vw;
+    border-radius: 0 999px 999px 0;
+    padding-right: 100px;
+    padding-left: 350px;
   }
 }
