@@ -31,7 +31,7 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       overlayClassName={sideBarStyles.BmOverlay}
       disableOverlayClick={true}
     >
-      <div className={sideBarStyles.SideBarQuote}>{'"The only was to go fast is to go well."'}</div>
+      <div className={sideBarStyles.SideBarQuote}>{'"The only way to go fast is to go well."'}</div>
       <div className={sideBarStyles.SideBarQuoteAuthor}>{'Robert C. Martin'}</div>
       <hr className={sideBarStyles.SideBarVerticalLine} />
       <Link href={'#home'} id={'homeLink'} className={sideBarStyles.BmItem}>{t.sidebar.homeButton}</Link>
