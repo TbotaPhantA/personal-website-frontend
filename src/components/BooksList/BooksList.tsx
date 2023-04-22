@@ -11,13 +11,13 @@ export default function BooksList({ bookReviews }: BooksListProps) {
 
   return (
     <div>
-      {bookReviews.map(review => {
+      {bookReviews.map((review, index) => {
         const translatedReview = review.article.translations.find(t => t.languageId === locale)
         const title = translatedReview?.title ?? review.article.originalTitle;
         const content = translatedReview?.content ?? review.article.originalContent;
 
         return (
-          <div key={review.id} className={booksListStyles.BooksListItem}>
+          <div key={review.id} className={booksListStyles.BooksListItem} data-aos={index % 2 ? 'fade-right' : 'fade-left'}>
             <div className={booksListStyles.BooksListItemTitle}>{title}</div>
             <div className={booksListStyles.BooksListItemContent}>{content}</div>
           </div>
