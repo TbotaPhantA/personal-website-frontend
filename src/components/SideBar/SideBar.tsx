@@ -37,6 +37,7 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       <Link href={'#home'} id={'homeLink'} className={sideBarStyles.BmItem}>{t.sidebar.homeButton}</Link>
       <Link href={'#about'} id={'aboutLink'} className={sideBarStyles.BmItem}>{t.sidebar.aboutButton}</Link>
       <Link href={'#books'} id={'booksLink'} className={sideBarStyles.BmItem}>{t.sidebar.booksButton}</Link>
+      <Link href={'#contact'} id={'contactLink'} className={sideBarStyles.BmItem}>{t.sidebar.contactButton}</Link>
       <hr className={sideBarStyles.SideBarVerticalLine} />
       <div className={sideBarStyles.SideBarFooter}>
         <SideBarSocialLinks />

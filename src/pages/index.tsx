@@ -4,6 +4,7 @@ import mainStyles from '@/styles/Main.module.scss';
 import { Books } from '@/anchors/books';
 import { BookReview } from '@/shared/types/bookReview';
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next';
+import { Contact } from '@/anchors/contact';
 
 interface MainProps {
   bookReviews: BookReview[];
@@ -15,6 +16,7 @@ export default function Main({ bookReviews }: MainProps) {
       <Home id="home" />
       <About id="about" />
       <Books id="books" bookReviews={bookReviews} />
+      <Contact />
     </div>
   )
 }

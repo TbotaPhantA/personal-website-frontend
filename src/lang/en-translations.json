@@ -24,6 +24,7 @@
     "homeButton": "Home",
     "aboutButton": "About",
     "booksButton": "Books",
+    "contactButton": "Contact",
     "links": { "title": "Links" }
   }
 }

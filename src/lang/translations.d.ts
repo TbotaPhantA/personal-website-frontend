@@ -24,6 +24,7 @@ declare module "*-translations.json" {
     homeButton: string,
     aboutButton: string,
     booksButton: string,
+    contactButton: string,
     links: { title: string }
   }
 }

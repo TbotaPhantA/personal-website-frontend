@@ -24,6 +24,7 @@
     "homeButton": "Главная",
     "aboutButton": "Обо мне",
     "booksButton": "Книги",
+    "contactButton": "Контакт",
     "links": { "title": "Ссылки" }
   }
 }
