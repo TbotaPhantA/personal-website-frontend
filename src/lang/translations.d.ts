@@ -17,6 +17,9 @@ declare module "*-translations.json" {
       },
       books: {
         title: string,
+      },
+      contact: {
+        title: string,
       }
     }
   };

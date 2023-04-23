@@ -17,6 +17,9 @@
       },
       "books": {
         "title": "Software books I've studied"
+      },
+      "contact": {
+        "title": "Contact Me"
       }
     }
   },
