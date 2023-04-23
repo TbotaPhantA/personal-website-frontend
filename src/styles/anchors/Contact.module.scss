@@ -1,4 +1,13 @@
+@import '../variables';
+
 .ContactAnchor {
   background-color: rgba(0, 0, 0, 0.80);
   min-height: 100vh;
+  padding-left: 300px;
+
+  .ContactAnchorTitle {
+    color: $base-red;
+    font-size: 128px;
+    margin: 150px 50px;
+  }
 }
