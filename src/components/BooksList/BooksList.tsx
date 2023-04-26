@@ -82,7 +82,7 @@ export default function BooksList({ bookReviews }: BooksListProps) {
         onRequestClose={() => closeModal()}
         style={modalWindowStyles}
       >
-        <div>
+        <div className={booksListStyles.BookReviewModalWrapper}>
           <div>{getReviewTitle()}</div>
           <div>{getReviewContent()}</div>
         </div>
