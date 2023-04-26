@@ -87,7 +87,7 @@ export default function BooksList({ bookReviews }: BooksListProps) {
         preventScroll={true}
       >
         <div className={booksListStyles.BookReviewModalCrossWrapper}>
-          <div className={booksListStyles.BookReviewModalCross}>
+          <div className={booksListStyles.BookReviewModalCross} onClick={() => closeModal()}>
             <FontAwesomeIcon icon={faTimes} size="3x" />
           </div>
         </div>
