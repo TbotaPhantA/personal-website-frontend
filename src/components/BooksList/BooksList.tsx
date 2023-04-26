@@ -22,7 +22,8 @@ const modalWindowStyles = {
     borderWidth: '0',
     color: 'white',
     backgroundColor: 'rgba(50, 20, 80, 0.98)',
-    fontSize: '26px'
+    fontSize: '26px',
+    overflow: 'hidden',
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -81,6 +82,7 @@ export default function BooksList({ bookReviews }: BooksListProps) {
         isOpen={isModalOpen}
         onRequestClose={() => closeModal()}
         style={modalWindowStyles}
+        preventScroll={true}
       >
         <div className={booksListStyles.BookReviewModalWrapper}>
           <div className={booksListStyles.BookReviewModalTitle}>{getReviewTitle()}</div>
