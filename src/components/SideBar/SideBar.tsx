@@ -30,6 +30,7 @@ export function SideBar({ pageWrapId, outerContainerId }: SideBarProps) {
       itemListClassName={sideBarStyles.BmItemList}
       overlayClassName={sideBarStyles.BmOverlay}
       disableOverlayClick={true}
+      noOverlay={true}
     >
       <div className={sideBarStyles.SideBarQuote}>{'"The only way to go fast is to go well."'}</div>
       <div className={sideBarStyles.SideBarQuoteAuthor}>{'Robert C. Martin'}</div>
