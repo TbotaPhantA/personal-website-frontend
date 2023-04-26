@@ -83,7 +83,7 @@ export default function BooksList({ bookReviews }: BooksListProps) {
         style={modalWindowStyles}
       >
         <div className={booksListStyles.BookReviewModalWrapper}>
-          <div>{getReviewTitle()}</div>
+          <div className={booksListStyles.BookReviewModalTitle}>{getReviewTitle()}</div>
           <div>{getReviewContent()}</div>
         </div>
       </Modal>

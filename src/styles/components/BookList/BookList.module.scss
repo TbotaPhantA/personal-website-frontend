@@ -53,5 +53,13 @@
 }
 
 .BookReviewModalWrapper {
-  padding: 20px 90px;
+  padding: 20px 100px;
+  text-align: left;
+
+  .BookReviewModalTitle {
+    color: $base-red;
+    text-align: center;
+    font-size: 36px;
+    padding-bottom: 3vh;
+  }
 }
