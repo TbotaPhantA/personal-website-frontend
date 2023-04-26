@@ -8,6 +8,10 @@
   height: 220px;
   overflow: hidden;
   padding: 20px;
+  cursor: pointer;
+  transition-property: all !important;
+  transition-duration: 0.2s !important;
+  user-select: none;
 
   .BooksListItemTitle {
     font-size: 52px;
@@ -28,6 +32,11 @@
     border-radius: 999px 0 0 999px;
     padding-left: 100px;
     padding-right: 300px;
+    border-right: none;
+
+    &:hover {
+      translate: 3px -2px;
+    }
   }
 
   &:nth-child(even) {
@@ -35,5 +44,11 @@
     border-radius: 0 999px 999px 0;
     padding-right: 100px;
     padding-left: 350px;
+    border-left: none;
+
+    &:hover {
+      translate: -3px -2px;
+    }
   }
+
 }
