@@ -8,6 +8,27 @@ interface BooksListProps {
   bookReviews: BookReview[],
 }
 
+const modalWindowStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '37vw',
+    height: '90vh',
+    borderRadius: '60px',
+    borderWidth: '0',
+    color: 'white',
+    backgroundColor: 'rgba(50, 20, 80, 0.98)',
+    fontSize: '26px'
+  },
+  overlay: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  }
+};
+
 export default function BooksList({ bookReviews }: BooksListProps) {
   const { locale } = useRouter();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -59,6 +80,7 @@ export default function BooksList({ bookReviews }: BooksListProps) {
       <Modal
         isOpen={isModalOpen}
         onRequestClose={() => closeModal()}
+        style={modalWindowStyles}
       >
         <div>{getReviewTitle()}</div>
         <div>{getReviewContent()}</div>
