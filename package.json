@@ -29,6 +29,7 @@
   "devDependencies": {
     "@types/aos": "^3.0.4",
     "@types/react-burger-menu": "^2.8.3",
+    "@types/react-modal": "^3.16.0",
     "sass": "^1.60.0"
   }
 }
