@@ -9,9 +9,9 @@ interface BooksListProps {
 }
 
 export default function BooksList({ bookReviews }: BooksListProps) {
+  const { locale } = useRouter();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedBookReview, setSelectedBookReview] = useState<BookReview | undefined>(undefined)
-  const { locale } = useRouter();
 
   function openModal(bookReview: BookReview) {
     setSelectedBookReview(bookReview);
@@ -20,6 +20,20 @@ export default function BooksList({ bookReviews }: BooksListProps) {
 
   function closeModal() {
     setIsModalOpen(false);
+  }
+
+  function getReviewTitle() {
+    if (selectedBookReview) {
+      const translation = selectedBookReview.article.translations.find(t => t.languageId === locale);
+      return translation?.title ?? selectedBookReview.article.originalTitle;
+    }
+  }
+
+  function getReviewContent() {
+    if (selectedBookReview) {
+      const translation = selectedBookReview.article.translations.find(t => t.languageId === locale);
+      return translation?.content ?? selectedBookReview.article.originalContent;
+    }
   }
 
   return (
@@ -46,8 +60,8 @@ export default function BooksList({ bookReviews }: BooksListProps) {
         isOpen={isModalOpen}
         onRequestClose={() => closeModal()}
       >
-        <div>{selectedBookReview?.article.originalTitle}</div>
-        <div>{selectedBookReview?.article.originalContent}</div>
+        <div>{getReviewTitle()}</div>
+        <div>{getReviewContent()}</div>
       </Modal>
     </div>
   )
