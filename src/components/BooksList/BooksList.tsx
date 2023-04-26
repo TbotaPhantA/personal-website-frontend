@@ -3,6 +3,8 @@ import { BookReview } from '@/shared/types/bookReview';
 import { useRouter } from 'next/router';
 import booksListStyles from '@/styles/components/BookList/BookList.module.scss';
 import Modal from 'react-modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 interface BooksListProps {
   bookReviews: BookReview[],
@@ -84,6 +86,11 @@ export default function BooksList({ bookReviews }: BooksListProps) {
         style={modalWindowStyles}
         preventScroll={true}
       >
+        <div className={booksListStyles.BookReviewModalCrossWrapper}>
+          <div className={booksListStyles.BookReviewModalCross}>
+            <FontAwesomeIcon icon={faTimes} size="3x" />
+          </div>
+        </div>
         <div className={booksListStyles.BookReviewModalWrapper}>
           <div className={booksListStyles.BookReviewModalTitle}>{getReviewTitle()}</div>
           <div>{getReviewContent()}</div>

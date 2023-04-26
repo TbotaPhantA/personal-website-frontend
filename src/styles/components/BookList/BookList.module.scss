@@ -56,9 +56,8 @@
   padding: 20px 100px;
   margin-right: 50px;
   text-align: left;
-  height: 85vh;
+  height: 76vh;
   overflow-y: scroll;
-
 
   .BookReviewModalTitle {
     color: $base-red;
@@ -80,5 +79,34 @@
   &::-webkit-scrollbar-thumb {
     background-color: $base-red;
     border-radius: 10px;
+  }
+}
+
+.BookReviewModalCrossWrapper {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.BookReviewModalCross {
+  margin-right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 0;
+  right: 0;
+  color: $base-red;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 3vh;
+  font-size: 18px;
+  border-radius: 999px;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: $base-red;
   }
 }
