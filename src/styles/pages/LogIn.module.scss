@@ -1,7 +1,16 @@
+@import '../variables.scss';
+
 .LogInPage {
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+
+  .LogInPageTitle {
+    color: white;
+    font-size: 164px;
+    text-shadow: 1px 1px 4px black;
+    letter-spacing: 40px;
+  }
 }
