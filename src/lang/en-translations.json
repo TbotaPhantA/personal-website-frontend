@@ -21,6 +21,12 @@
       "contact": {
         "title": "Contact Me"
       }
+    },
+    "signIn": {
+      "title": "SIgn in",
+      "usernameLabel": "Username:",
+      "passwordLabel": "Password:",
+      "button": "Sign in"
     }
   },
   "sidebar": {

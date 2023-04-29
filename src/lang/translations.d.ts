@@ -21,6 +21,12 @@ declare module "*-translations.json" {
       contact: {
         title: string,
       }
+    },
+    signIn: {
+      title: string,
+      usernameLabel: string,
+      passwordLabel: string,
+      button: string
     }
   };
   export const sidebar: {

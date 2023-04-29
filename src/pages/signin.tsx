@@ -1,5 +1,7 @@
 import signInStyles from '@/styles/pages/SignIn.module.scss';
 import { useState, FormEvent, ChangeEvent } from 'react';
+import { useRouter } from 'next/router';
+import { chooseTranslation } from '@/shared/utils/chooseTranslation';
 
 export interface FormValues {
   username: string;
@@ -7,6 +9,8 @@ export interface FormValues {
 }
 
 export default function SignIn() {
+  const { locale } = useRouter();
+  const t = chooseTranslation(locale);
   const [formValues, setFormValues] = useState<FormValues>({
     username: '',
     password: '',
@@ -45,9 +49,9 @@ export default function SignIn() {
 
   return (
     <form className={signInStyles.SignInPage} onSubmit={handleSubmit}>
-      <h1 className={signInStyles.SignInPageTitle}>SIgn In</h1>
+      <h1 className={signInStyles.SignInPageTitle}>{t.pages.signIn.title}</h1>
       <label className={signInStyles.SignInLoginLabel}>
-        Username:
+        {t.pages.signIn.usernameLabel}
         <input
           type="text"
           name="username"
@@ -57,7 +61,7 @@ export default function SignIn() {
         />
       </label>
       <label className={signInStyles.SignInPasswordLabel}>
-        Password:
+        {t.pages.signIn.passwordLabel}
         <input
           type="password"
           name="password"
@@ -67,7 +71,7 @@ export default function SignIn() {
         />
       </label>
       {errors.map(e => (<p key={e}>{e}</p>))}
-      <button type="submit" className={signInStyles.SignInButton}>Sign In</button>
+      <button type="submit" className={signInStyles.SignInButton}>{t.pages.signIn.button}</button>
     </form>
   )
 }

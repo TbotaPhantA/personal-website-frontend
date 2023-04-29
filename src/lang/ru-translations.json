@@ -21,6 +21,12 @@
       "contact": {
         "title": "Связь со мной"
       }
+    },
+    "signIn": {
+      "title": "Войти",
+      "usernameLabel": "Имя:",
+      "passwordLabel": "Пароль:",
+      "button": "Войти"
     }
   },
   "sidebar": {
