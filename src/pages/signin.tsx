@@ -5,18 +5,18 @@ export default function SignIn() {
   const [error, setError] = useState<string>('');
 
   return (
-    <div className={signInStyles.SignInPage}>
+    <form className={signInStyles.SignInPage}>
       <h1 className={signInStyles.SignInPageTitle}>SIgn In</h1>
-      <label>
+      <label className={signInStyles.SignInLoginLabel}>
         Login:
-        <input type="text"/>
+        <input type="text" className={signInStyles.SignInLoginInput}/>
       </label>
-      <label>
+      <label className={signInStyles.SignInPasswordLabel}>
         Password:
-        <input type="password"/>
+        <input type="password" className={signInStyles.SignInPasswordInput}/>
       </label>
       {error && <p>{error}</p>}
       <button type="submit" className={signInStyles.SignInButton}>Sign In</button>
-    </div>
+    </form>
   )
 }
