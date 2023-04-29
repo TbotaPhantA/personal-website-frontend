@@ -21,8 +21,26 @@ export default function SignIn() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
+    // const validationErrors = signInFormValidator(formValues)
+    // if (validationErrors.length > 0) {
+    //   setErrors(validationErrors)
+    //   return;
+    // }
+
     // const signInResponse = await signIn(formValues);
+
+    // if (is422Response(signInResponse)) {
+    //   setErrors(...)
+    //   return;
+    // }
+
+    // if (is400Response(signInResponse)) {
+    //   setErrors(...)
+    //   return;
+    // }
+
     // Save the result using effector
+    // redirect
   }
 
   return (
