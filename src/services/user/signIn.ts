@@ -1,11 +1,11 @@
 import { Responses } from '@/shared/types/responses/responses';
-import { IResponse } from '@/shared/types/responses/IResponse';
+import { ResponseWrapper } from '@/shared/types/responses/ResponseWrapper';
 import { HttpStatusCode } from 'axios';
 import { SignInFormValues } from '@/pages/signin';
 import api from '@/api';
 import { uri } from '@/api/uri';
 
-type SignInResponse200 = IResponse<HttpStatusCode.Ok, {
+type SignInResponse200 = ResponseWrapper<HttpStatusCode.Ok, {
   accessToken: string;
 }>
 
