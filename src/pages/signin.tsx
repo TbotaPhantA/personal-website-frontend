@@ -6,7 +6,7 @@ import { IsNotEmpty, IsString, Length, validateSync } from 'class-validator';
 import { extractErrorMessages } from '@/shared/utils/extractErrorMessages';
 import { plainToClass } from 'class-transformer';
 
-export class FormValues {
+export class SignInFormValues {
   @IsNotEmpty()
   @IsString()
   @Length(2, 30)
@@ -21,7 +21,7 @@ export class FormValues {
 export default function SignIn() {
   const { locale } = useRouter();
   const t = chooseTranslation(locale);
-  const [formValues, setFormValues] = useState<FormValues>({
+  const [formValues, setFormValues] = useState<SignInFormValues>({
     username: '',
     password: '',
   })
@@ -35,7 +35,7 @@ export default function SignIn() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
-    const errorMessages = extractErrorMessages(validateSync(plainToClass(FormValues, formValues)));
+    const errorMessages = extractErrorMessages(validateSync(plainToClass(SignInFormValues, formValues)));
 
     setErrors(errorMessages);
     console.log(errors)
