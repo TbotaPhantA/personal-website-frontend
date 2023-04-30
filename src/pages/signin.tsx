@@ -2,10 +2,11 @@ import signInStyles from '@/styles/pages/SignIn.module.scss';
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 import { chooseTranslation } from '@/shared/utils/chooseTranslation';
-import { IsNotEmpty, IsString, Length } from 'class-validator';
+import { IsNotEmpty, IsString, Length, validateSync } from 'class-validator';
 import { extractErrorMessages } from '@/shared/utils/extractErrorMessages';
 import { signIn } from '@/services/user/signIn';
 import { isInvalidDtoResponse } from '@/shared/utils/responses/isInvalidDtoResponse';
+import { plainToClass } from 'class-transformer';
 
 export class SignInFormValues {
   @IsNotEmpty()
@@ -20,8 +21,8 @@ export class SignInFormValues {
 }
 
 export default function SignIn() {
-  const { locale } = useRouter();
-  const t = chooseTranslation(locale);
+  const router = useRouter();
+  const t = chooseTranslation(router.locale);
   const [formValues, setFormValues] = useState<SignInFormValues>({
     username: '',
     password: '',
@@ -36,10 +37,10 @@ export default function SignIn() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
-    // const errorMessages = extractErrorMessages(validateSync(plainToClass(SignInFormValues, formValues)));
-    //
-    // setErrors(errorMessages);
-    // if (errorMessages.length > 0) return;
+    const errorMessages = extractErrorMessages(validateSync(plainToClass(SignInFormValues, formValues)));
+
+    setErrors(errorMessages);
+    if (errorMessages.length > 0) return;
 
     const signInResponse = await signIn(formValues);
 
