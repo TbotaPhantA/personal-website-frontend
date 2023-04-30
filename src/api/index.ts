@@ -7,3 +7,5 @@ const settings: CreateAxiosDefaults = <axios.CreateAxiosDefaults<any>>{
 }
 
 const api = axios.create(settings);
+
+export default api;
