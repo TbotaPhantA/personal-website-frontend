@@ -80,7 +80,11 @@ export default function SignIn() {
           onChange={handleInputChange}
         />
       </label>
-      {errors.map(e => (<p key={e}>{e}</p>))}
+      {errors.length > 0 ? (
+        <div className={signInStyles.SignInErrorMessagesWrapper}>
+          {errors.map(e => (<div key={e}>{`- ${e}`}</div>))}
+        </div>
+      ) : (<></>)}
       <button type="submit" className={signInStyles.SignInButton}>{t.pages.signIn.button}</button>
     </form>
   )
