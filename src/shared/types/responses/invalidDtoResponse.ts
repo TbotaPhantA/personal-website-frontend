@@ -5,6 +5,6 @@ import { ValidationError } from 'class-validator';
 
 export type InvalidDtoResponse = ResponseWrapper<HttpStatusCode.UnprocessableEntity, {
   statusCode: HttpStatusCode.UnprocessableEntity,
-  message: INVALID_DTO,
+  message: typeof INVALID_DTO,
   data: { errors: ValidationError[] }
 }>

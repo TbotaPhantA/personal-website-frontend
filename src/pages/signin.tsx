@@ -2,9 +2,10 @@ import signInStyles from '@/styles/pages/SignIn.module.scss';
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 import { chooseTranslation } from '@/shared/utils/chooseTranslation';
-import { IsNotEmpty, IsString, Length, validateSync } from 'class-validator';
+import { IsNotEmpty, IsString, Length } from 'class-validator';
 import { extractErrorMessages } from '@/shared/utils/extractErrorMessages';
-import { plainToClass } from 'class-transformer';
+import { signIn } from '@/services/user/signIn';
+import { isInvalidDtoResponse } from '@/shared/utils/responses/isInvalidDtoResponse';
 
 export class SignInFormValues {
   @IsNotEmpty()
@@ -35,18 +36,17 @@ export default function SignIn() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
-    const errorMessages = extractErrorMessages(validateSync(plainToClass(SignInFormValues, formValues)));
+    // const errorMessages = extractErrorMessages(validateSync(plainToClass(SignInFormValues, formValues)));
+    //
+    // setErrors(errorMessages);
+    // if (errorMessages.length > 0) return;
 
-    setErrors(errorMessages);
-    console.log(errors)
-    if (errorMessages.length > 0) return;
+    const signInResponse = await signIn(formValues);
 
-    // const signInResponse = await signIn(formValues);
-
-    // if (is422Response(signInResponse)) {
-    //   setErrors(...)
-    //   return;
-    // }
+    if (isInvalidDtoResponse(signInResponse)) {
+      setErrors(extractErrorMessages(signInResponse.data.data.errors))
+      return;
+    }
 
     // if (is400Response(signInResponse)) {
     //   setErrors(...)

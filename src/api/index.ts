@@ -1,7 +1,7 @@
 import axios, { CreateAxiosDefaults } from 'axios';
 import config from '@/api/config';
 
-const settings: CreateAxiosDefaults = <axios.CreateAxiosDefaults<any>>{
+const settings: CreateAxiosDefaults = <CreateAxiosDefaults>{
   baseURL: config.BASE_URL,
   timeout: config.BASE_TIMEOUT,
 }

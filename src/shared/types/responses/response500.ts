@@ -4,5 +4,5 @@ import { INTERNAL_SERVER_ERROR } from '@/shared/errorMessages';
 
 export type Response500 = ResponseWrapper<HttpStatusCode.InternalServerError, {
   statusCode: HttpStatusCode.InternalServerError,
-  message: INTERNAL_SERVER_ERROR,
+  message: typeof INTERNAL_SERVER_ERROR,
 }>

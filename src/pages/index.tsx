@@ -30,5 +30,5 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<MainProps>>
     return { props: response.data, revalidate: 30 }
   }
 
-  alert('Error: Unhandled response');
+  throw new Error('Error: Unhandled response')
 }
