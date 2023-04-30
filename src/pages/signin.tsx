@@ -2,9 +2,19 @@ import signInStyles from '@/styles/pages/SignIn.module.scss';
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useRouter } from 'next/router';
 import { chooseTranslation } from '@/shared/utils/chooseTranslation';
+import { IsNotEmpty, IsString, Length, validateSync } from 'class-validator';
+import { extractErrorMessages } from '@/shared/utils/extractErrorMessages';
+import { plainToClass } from 'class-transformer';
 
-export interface FormValues {
+export class FormValues {
+  @IsNotEmpty()
+  @IsString()
+  @Length(2, 30)
   username: string;
+
+  @IsNotEmpty()
+  @IsString()
+  @Length(6, 100)
   password: string;
 }
 
@@ -25,11 +35,11 @@ export default function SignIn() {
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
-    // const validationErrors = signInFormValidator(formValues)
-    // if (validationErrors.length > 0) {
-    //   setErrors(validationErrors)
-    //   return;
-    // }
+    const errorMessages = extractErrorMessages(validateSync(plainToClass(FormValues, formValues)));
+
+    setErrors(errorMessages);
+    console.log(errors)
+    if (errorMessages.length > 0) return;
 
     // const signInResponse = await signIn(formValues);
 
