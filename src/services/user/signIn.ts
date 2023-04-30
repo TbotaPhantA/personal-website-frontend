@@ -10,5 +10,5 @@ type SignInResponse200 = ResponseWrapper<HttpStatusCode.Ok, {
 }>
 
 export async function signIn(data: SignInFormValues): Promise<Responses<SignInResponse200>> {
-  return api.post(`${uri.user}/login`, data);
+  return api.post(`${uri.user}/login`, data).catch(e => e.response);
 }
