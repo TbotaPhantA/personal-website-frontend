@@ -3,7 +3,7 @@ const throwRequired = (propName: keyof NodeJS.ProcessEnv): never => {
 };
 
 class Config {
-  BASE_URL: string = process.env.BASE_URL ?? throwRequired('BASE_URL');
+  BASE_URL: string = process.env.NEXT_PUBLIC_BASE_URL ?? throwRequired('BASE_URL');
   BASE_TIMEOUT: number = 10000;
 
   private static instance: Config;
