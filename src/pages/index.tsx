@@ -5,7 +5,7 @@ import { Books } from '@/anchors/books';
 import { BookReview } from '@/shared/types/bookReview';
 import { GetStaticPropsResult } from 'next';
 import { Contact } from '@/anchors/contact';
-import { getAllBookReviews } from '@/services/bookReview/getAllBookReviews';
+import { getAllBookReviews } from '@/api/apiCalls/bookReview/getAllBookReviews';
 import { is200thResponse } from '@/shared/utils/responses/is200thResponse';
 
 interface MainProps {

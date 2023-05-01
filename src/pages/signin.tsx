@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { chooseTranslation } from '@/shared/utils/chooseTranslation';
 import { IsNotEmpty, IsString, Length, validateSync } from 'class-validator';
 import { extractErrorMessages } from '@/shared/utils/extractErrorMessages';
-import { signIn } from '@/services/user/signIn';
+import { signIn } from '@/api/apiCalls/user/signIn';
 import { isInvalidDtoResponse } from '@/shared/utils/responses/isInvalidDtoResponse';
 import { plainToClass } from 'class-transformer';
 
