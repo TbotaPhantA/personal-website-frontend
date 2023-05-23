@@ -51,8 +51,8 @@ export default function SignIn() {
       return;
     }
 
-    // Save the result using effector
-    // redirect
+    // TODO: Save the result using effector
+    // TODO: redirect
   }
 
   return (
