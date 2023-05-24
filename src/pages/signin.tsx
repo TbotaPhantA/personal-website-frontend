@@ -61,9 +61,8 @@ export default function SignIn() {
       const decoded = jwt_decode<JwtToken<User>>(accessToken);
       const user = decoded.payload;
       updateUser(user);
+      router.push('/');
     }
-
-    // TODO: redirect
   }
 
   return (
