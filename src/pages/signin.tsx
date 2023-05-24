@@ -10,7 +10,6 @@ import { is401thResponse } from '@/shared/utils/responses/is401thResponse';
 import { updateUser } from '@/stores/authStore/events/updateUser';
 import { is200thResponse } from '@/shared/utils/responses/is200thResponse';
 import jwt_decode from 'jwt-decode';
-import { JwtToken } from '@/shared/utils/jwtToken';
 import { User } from '@/shared/types/user';
 
 export class SignInFormValues {
@@ -58,8 +57,7 @@ export default function SignIn() {
     if (is200thResponse<SignInResponse200>(signInResponse)) {
       const { accessToken } = signInResponse.data
       localStorage.setItem('accessToken', accessToken);
-      const decoded = jwt_decode<JwtToken<User>>(accessToken);
-      const user = decoded.payload;
+      const user = jwt_decode<User>(accessToken);
       updateUser(user);
       router.push('/');
     }
