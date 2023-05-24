@@ -63,8 +63,6 @@ export default function SignIn() {
       updateUser(user);
     }
 
-
-    // TODO: Save the result using effector
     // TODO: redirect
   }
 
