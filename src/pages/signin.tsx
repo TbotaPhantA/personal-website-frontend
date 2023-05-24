@@ -4,9 +4,14 @@ import { useRouter } from 'next/router';
 import { chooseTranslation } from '@/shared/utils/chooseTranslation';
 import { IsNotEmpty, IsString, Length } from 'class-validator';
 import { extractErrorMessages } from '@/shared/utils/extractErrorMessages';
-import { signIn } from '@/api/apiCalls/user/signIn';
+import { signIn, SignInResponse200 } from '@/api/apiCalls/user/signIn';
 import { isInvalidDtoResponse } from '@/shared/utils/responses/isInvalidDtoResponse';
 import { is401thResponse } from '@/shared/utils/responses/is401thResponse';
+import { updateUser } from '@/stores/authStore/events/updateUser';
+import { is200thResponse } from '@/shared/utils/responses/is200thResponse';
+import jwt_decode from 'jwt-decode';
+import { JwtToken } from '@/shared/utils/jwtToken';
+import { User } from '@/shared/types/user';
 
 export class SignInFormValues {
   @IsNotEmpty()
@@ -28,7 +33,6 @@ export default function SignIn() {
     password: '',
   })
   const [errors, setErrors] = useState<string[]>([]);
-  // const auth = useStore(authStore);
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement>): void {
     const { name, value } = event.target;
@@ -50,6 +54,15 @@ export default function SignIn() {
       setErrors([signInResponse.data.message])
       return;
     }
+
+    if (is200thResponse<SignInResponse200>(signInResponse)) {
+      const { accessToken } = signInResponse.data
+      localStorage.setItem('accessToken', accessToken);
+      const decoded = jwt_decode<JwtToken<User>>(accessToken);
+      const user = decoded.payload;
+      updateUser(user);
+    }
+
 
     // TODO: Save the result using effector
     // TODO: redirect

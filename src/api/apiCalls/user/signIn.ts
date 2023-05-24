@@ -5,7 +5,7 @@ import { SignInFormValues } from '@/pages/signin';
 import api from '@/api';
 import { uri } from '@/api/uri';
 
-type SignInResponse200 = ResponseWrapper<HttpStatusCode.Ok, {
+export type SignInResponse200 = ResponseWrapper<HttpStatusCode.Ok, {
   accessToken: string;
 }>
 
