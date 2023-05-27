@@ -107,9 +107,13 @@ export default function BooksList({ bookReviews }: BooksListProps) {
         {
           user ? (
             <div className={booksListStyles.BookReviewModalSaveButtonWrapper}>
-              <div className={booksListStyles.BookReviewModalSaveButton} onClick={() => closeModal()}>
+              <button
+                className={booksListStyles.BookReviewModalSaveButton}
+                onClick={() => closeModal()}
+                disabled={false}
+              >
                 Save
-              </div>
+              </button>
             </div>
           ) : null
         }
