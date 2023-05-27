@@ -5,6 +5,8 @@ import booksListStyles from '@/styles/components/BookList/BookList.module.scss';
 import Modal from 'react-modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { useStore } from 'effector-react';
+import { $userStore } from '@/stores/authStore/authStore';
 
 interface BooksListProps {
   bookReviews: BookReview[],
@@ -36,6 +38,7 @@ export default function BooksList({ bookReviews }: BooksListProps) {
   const { locale } = useRouter();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedBookReview, setSelectedBookReview] = useState<BookReview | undefined>(undefined)
+  const user = useStore($userStore);
 
   function openModal(bookReview: BookReview) {
     setSelectedBookReview(bookReview);
@@ -92,8 +95,14 @@ export default function BooksList({ bookReviews }: BooksListProps) {
           </div>
         </div>
         <div className={booksListStyles.BookReviewModalWrapper}>
-          <div className={booksListStyles.BookReviewModalTitle}>{getReviewTitle()}</div>
-          <div>{getReviewContent()}</div>
+          <div
+            className={booksListStyles.BookReviewModalTitle}
+            contentEditable={!!user}
+          >{getReviewTitle()}</div>
+          <div
+            className={booksListStyles.BookReviewModalContent}
+            contentEditable={!!user}
+          >{getReviewContent()}</div>
         </div>
       </Modal>
     </div>

@@ -63,7 +63,20 @@
     color: $base-red;
     text-align: center;
     font-size: 36px;
-    padding-bottom: 3vh;
+    margin-bottom: 3vh;
+    padding: 1vh 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .BookReviewModalContent {
+    padding: 5px;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &::-webkit-scrollbar {
