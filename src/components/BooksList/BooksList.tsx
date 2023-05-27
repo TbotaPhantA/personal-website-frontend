@@ -104,11 +104,15 @@ export default function BooksList({ bookReviews }: BooksListProps) {
             contentEditable={!!user}
           >{getReviewContent()}</div>
         </div>
-        <div className={booksListStyles.BookReviewModalSaveButtonWrapper}>
-          <div className={booksListStyles.BookReviewModalSaveButton} onClick={() => closeModal()}>
-            Save
-          </div>
-        </div>
+        {
+          user ? (
+            <div className={booksListStyles.BookReviewModalSaveButtonWrapper}>
+              <div className={booksListStyles.BookReviewModalSaveButton} onClick={() => closeModal()}>
+                Save
+              </div>
+            </div>
+          ) : null
+        }
       </Modal>
     </div>
   )
