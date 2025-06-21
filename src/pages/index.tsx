@@ -17,18 +17,18 @@ export default function Main({ bookReviews }: MainProps) {
     <div className={mainStyles.MainPage}>
       <Home id="home" />
       <About id="about" />
-      <Books id="books" bookReviews={bookReviews} />
+      <Books id="books" bookReviews={[]} />
       <Contact />
     </div>
   )
 }
 
-export async function getStaticProps(): Promise<GetStaticPropsResult<MainProps>> {
-  const response = await getAllBookReviews();
-
-  if (is200thResponse(response)) {
-    return { props: response.data, revalidate: 30 }
-  }
-
-  throw new Error('Error: Unhandled response')
-}
+// export async function getStaticProps(): Promise<GetStaticPropsResult<MainProps>> {
+//   const response = await getAllBookReviews();
+//
+//   if (is200thResponse(response)) {
+//     return { props: response.data, revalidate: 30 }
+//   }
+//
+//   throw new Error('Error: Unhandled response')
+// }
