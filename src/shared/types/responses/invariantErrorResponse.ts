@@ -9,6 +9,6 @@ interface InvariantErrorMessages {
 
 export type InvariantErrorResponse = ResponseWrapper<HttpStatusCode.UnprocessableEntity, {
   statusCode: HttpStatusCode.BadRequest,
-  message: INVARIANT_ERROR,
+  message: typeof INVARIANT_ERROR,
   data: InvariantErrorMessages[],
 }>

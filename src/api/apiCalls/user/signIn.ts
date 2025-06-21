@@ -11,6 +11,6 @@ export type SignInResponse200 = ResponseWrapper<HttpStatusCode.Ok, {
 
 export async function signIn(data: SignInFormValues, locale: string | undefined): Promise<Responses<SignInResponse200>> {
   return api.post(`${uri.user}/login`, data, {
-    headers: (locale ? { 'Accept-Language': locale } as typeof AxiosHeaders : {}) ,
+    headers: (locale ? { 'Accept-Language': locale } : {}) ,
   }).catch(e => e.response);
 }
