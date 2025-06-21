@@ -1,4 +1,4 @@
-@import '../../variables';
+@use '../../variables';
 
 /* Position and sizing of burger button */
 .BmBurgerButton {
@@ -11,7 +11,7 @@
 
 /* Color/shape of burger icon bars */
 .BmBurgerBars {
-  background: $base-purple;
+  background: variables.$base-purple;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $base-red;
+  color: variables.$base-red;
   height: 64px !important;
   width: 64px !important;
   text-align: center;
@@ -33,14 +33,14 @@
   right: 0 !important;
 
   &:hover {
-    background-color: $base-red;
+    background-color: variables.$base-red;
     color: white;
   }
 }
 
 /* Color/shape of close button cross */
 .BmCross {
-  background: $base-red;
+  background: variables.$base-red;
 }
 
 /*
@@ -54,7 +54,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .BmMenu {
-  background: $base-purple;
+  background: variables.$base-purple;
   padding: 64px 0 0;
   margin: 0;
   font-size: 1.15em;
@@ -63,12 +63,12 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* Morph shape necessary with bubble or elastic */
 .BmMorphShape {
-  fill: $base-red;
+  fill: variables.$base-red;
 }
 
 /* Wrapper for item list */
 .BmItemList {
-  color: $base-red;
+  color: variables.$base-red;
 }
 
 /* Individual item */
@@ -76,16 +76,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
   display: inline-block;
   height: 5vh;
   font-size: 4vh;
-  font-family: $font-family;
+  font-family: variables.$font-family;
   text-shadow: 1px 1px 2px black;
   text-align: center;
-  color: $base-red;
+  color: variables.$base-red;
   text-decoration: none;
   padding: 1vh 0;
   margin: 0 10%;
 
   &:hover {
-    background-color: $base-red;
+    background-color: variables.$base-red;
     color: white;
   }
 }
@@ -103,7 +103,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-align: center;
   font-size: 2vh;
   font-weight: 200;
-  font-family: $font-family;
+  font-family: variables.$font-family;
   text-shadow: 1px 1px 2px black;
   padding: 3vh 2vw 0 2vw;
   color: white;
@@ -117,14 +117,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
   text-align: center;
   font-size: 2vh;
   font-weight: 100;
-  font-family: $font-family;
+  font-family: variables.$font-family;
   text-shadow: 1px 1px 2px black;
   padding: 2vh 2vw 2vh 2vw;
   color: white;
 }
 
 .SideBarVerticalLine {
-  border-color: $base-red;
+  border-color: variables.$base-red;
   width: 80%;
 }
 

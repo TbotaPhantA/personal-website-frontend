@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@use '../variables.scss';
 
 .AboutPage {
   display: flex;
@@ -6,7 +6,7 @@
   background-color: rgba(0, 0, 0, 0);
   width: 100%;
   min-height: 100vh;
-  font-family: $font-family;
+  font-family: variables.$font-family;
 
   .AboutPageTitle {
     position: absolute;
@@ -14,7 +14,7 @@
     min-height: 50vh;
     width: 50%;
     background-color: rgba(0, 0, 0, 0.80);
-    color: $base-red;
+    color: variables.$base-red;
     border-radius: 999px 0 0 999px;
     font-size: 6vw;
     text-shadow: 1px 1px 2px black;

@@ -1,4 +1,4 @@
-@import '../variables';
+@use '../variables';
 
 .BooksAnchor {
   display: flex;
@@ -8,7 +8,7 @@
   color: white;
 
   .BooksAnchorTitle {
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-size: 6vw;
     text-align: center;
     padding-top: 5vh;

@@ -1,4 +1,4 @@
-@import '../../variables';
+@use '../../variables';
 
 .BooksListItem {
   display: flex;
@@ -15,7 +15,7 @@
 
   .BooksListItemTitle {
     font-size: 52px;
-    color: $base-red;
+    color: variables.$base-red;
   }
 
   .BooksListItemContent {
@@ -60,7 +60,7 @@
   overflow-y: scroll;
 
   .BookReviewModalTitle {
-    color: $base-red;
+    color: variables.$base-red;
     text-align: center;
     font-size: 36px;
     margin-bottom: 3vh;
@@ -90,7 +90,7 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $base-red;
+    background-color: variables.$base-red;
     border-radius: 10px;
   }
 }
@@ -115,7 +115,7 @@
     padding: 5px 10px;
     margin: 15px 0;
     border-radius: 5px;
-    background-color: $base-red;
+    background-color: variables.$base-red;
   }
 }
 
@@ -128,7 +128,7 @@
   position: relative;
   top: 0;
   right: 0;
-  color: $base-red;
+  color: variables.$base-red;
   height: 60px;
   width: 60px;
   margin-bottom: 3vh;
@@ -138,6 +138,6 @@
 
   &:hover {
     color: white;
-    background-color: $base-red;
+    background-color: variables.$base-red;
   }
 }
