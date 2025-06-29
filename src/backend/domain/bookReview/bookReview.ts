@@ -10,11 +10,12 @@ export class BookReview {
   }
 
   createByDto(dto: CreateBookReviewDto): BookReview {
-    return new BookReview(dto);
+    return new BookReview({ ...dto, bookReviewId: -1 });
   }
 }
 
 interface BookReviewState {
+  bookReviewId: number;
   title: string;
   language: LanguageCodesEnum;
   content: string;
