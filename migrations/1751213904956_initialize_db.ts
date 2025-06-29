@@ -13,7 +13,10 @@ export async function up(db: Kysely<Database>): Promise<void> {
   await db.schema.createTable('users')
     .addColumn('username', 'text', col => col.notNull())
     .addColumn('role', 'text', col => col.notNull())
+    .addColumn('salt', 'text', col => col.notNull())
     .addColumn('password_hash', 'text', col => col.notNull())
+    .addColumn('access_token_version', 'integer', col => col)
+    .addColumn('refresh_token', 'text', col => col)
     .addPrimaryKeyConstraint('username_pk', ['username'])
     .execute();
 }

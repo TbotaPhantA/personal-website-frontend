@@ -10,7 +10,10 @@ export interface BookReviewTable {
 export interface Users {
   username: string;
   role: UserRoleEnum;
+  salt: string;
   password_hash: string;
+  access_token_version?: string;
+  refresh_token?: string;
 }
 
 export interface Database {
